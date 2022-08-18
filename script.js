@@ -30,7 +30,24 @@ function generatePassword() {
   var numbers = '0123456789';
   var symbols = '#$%&()*+,-./:;<=>?@[\]^_`{|}~';
 
+
   var desiredLength = []
+
+  if (conLowerCase) {
+    desiredLength = desiredLength.concat(lowerCase)
+  }
+  if (conUpperCase) {
+    desiredLength = desiredLength.concat(upperCase)
+  } 
+  if (conNumbers) {
+    desiredLength = desiredLength.concat(numbers)
+  } 
+  if (conSymbols) {
+    desiredLength = desiredLength.concat(symbols)
+  }
+  console.log(desiredLength);
+
+
 
 }
 
