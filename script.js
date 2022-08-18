@@ -2,7 +2,7 @@
 var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
-  var initInput = prompt("How many characters do you want to use? Choose between 8 and 128 characters!");
+  var initInput = prompt("How many characters do you want in your passphrase? Choose between 8 and 128 characters!");
   var passwordLength = parseInt(initInput);
 
   if (isNaN(passwordLength)) {
@@ -16,15 +16,22 @@ function generatePassword() {
   }
 
   if (passwordLength >= 8 || passwordLength <= 128) {
-    prompt("Would you like to include lowercase letters in your password?");
+    prompt("Would you like to include lowercase letters in your passphrase?");
     return
   }
 
+  var conLowerCase = confirm("Would you like to include lowercase letters in your passphrase?");
+  var conUpperCase = confirm("Would you like to include uppercase letters in your passphrase?");
+  var conNumbers = confirm("Would you like to include numbers in your passphrase?");
+  var conSymbols = confirm("Would you like to include symbols in your passphrase?");
 
   var lowerCase = 'abcdefghijklmnopqrstuvwxyz';
   var upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   var numbers = '0123456789';
   var symbols = '#$%&()*+,-./:;<=>?@[\]^_`{|}~';
+
+  var desiredLength = []
+
 }
 
 // Write password to the #password input
